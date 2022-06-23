@@ -28,8 +28,8 @@ body {
     box-shadow: 
     4px 4px 6px rgba(0,0,0,0.3),
     0 0 8px rgba(0,0,0,0.7) inset;
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,12 +38,14 @@ body {
     font-size: 90px;
     font-family: 'digital-7-mono', monospace;
 }
-
+.sec {
+    position: relative;
+    font-size: 45px;
+}
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.month .date {
+    line-height: 90px;
 }

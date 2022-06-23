@@ -16,6 +16,18 @@ $(function(){
         $('.month').html(month);
         $('.date').html(date);
 
+        let week = d.getDay();
+        
+        if(week == 0) {week = 'SUN'};
+        if(week == 1) {week = 'MON'};
+        if(week == 2) {week = 'TUE'};
+        if(week == 3) {week = 'WED'};
+        if(week == 4) {week = 'THU'};
+        if(week == 5) {week = 'FRI'};
+        if(week == 6) {week = 'SAT'};
+
+        $('.week').html(week);
+
         // 0 ~ 9까지는 앞에 0 표시
         if(s < 10) {
             s = '0' + s;
@@ -29,10 +41,10 @@ $(function(){
         
         // 오전/오후 표시
         if(h < 12) {
-            h = 'AM ' + h;
+            h = 'AM' + h;
         }
         else {
-            h = 'PM ' + h;
+            h = 'PM' + h;
         }
 
         // if(m >= 50) {
