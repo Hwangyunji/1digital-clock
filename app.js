@@ -41,15 +41,28 @@ $(function(){
         
         // 오전/오후 표시
         if(h < 12) {
-            h = 'AM' + h;
+            h = 'AM ' + h;
         }
         else {
-            h = 'PM' + h;
+            h = 'PM ' + h;
         }
 
-        // if(m >= 50) {
+        // if(m >= 10) {
         //     alert('휴식시간');
         // }
+
+        if(m == 50) {
+            if(s == 00){
+                /*alert('휴식시간');*/
+                $(function(){
+                    $('.container').addClass('on')
+                })
+            };
+        }
+    
+        $('.container').click(function(){
+            $('.container').removeClass('on')
+        })
 
         // 시간표시
         $('.hour').html(h);
